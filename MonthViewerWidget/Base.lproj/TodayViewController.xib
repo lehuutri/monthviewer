@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController" customModule="MonthViewerWidget" customModuleProvider="target">
+            <connections>
+                <outlet property="lMonth" destination="5le-ng-0l4" id="mq9-uM-qSD"/>
+                <outlet property="lYear" destination="AzQ-Ke-CRV" id="uUW-MP-jQg"/>
+                <outlet property="nMonth" destination="74U-fj-wjY" id="trO-va-sXv"/>
+                <outlet property="pMonth" destination="AWx-NL-h94" id="uBJ-pc-BLs"/>
+                <outlet property="textView" destination="yn7-Mh-EJn" id="qw1-6t-FfE"/>
+                <outlet property="todayMonth" destination="R7d-2y-Jrt" id="kRg-WA-KMx"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView simulatedAppContext="notificationCenter" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="244" height="97"/>
+            <subviews>
+                <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jf8-KI-8aa" userLabel="mainView">
+                    <rect key="frame" x="0.0" y="0.0" width="244" height="97"/>
+                    <subviews>
+                        <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sKv-nP-AQK" userLabel="navView">
+                            <rect key="frame" x="0.0" y="0.0" width="65" height="97"/>
+                            <subviews>
+                                <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DVf-T4-iSi" userLabel="monthStack">
+                                    <rect key="frame" x="3" y="65" width="58" height="32"/>
+                                    <subviews>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AWx-NL-h94" userLabel="pMonth">
+                                            <rect key="frame" x="0.0" y="0.0" width="17" height="32"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="bevel" title="〈" alternateTitle="pMonth" bezelStyle="rounded" alignment="center" inset="2" id="Dk7-q2-yG0">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                                <connections>
+                                                    <action selector="goPreviousMonth:" target="-2" id="eEx-d5-75A"/>
+                                                </connections>
+                                            </buttonCell>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5le-ng-0l4" userLabel="lMonth">
+                                            <rect key="frame" x="15" y="7" width="28" height="17"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="DEC" id="chP-GZ-GT4">
+                                                <font key="font" metaFont="fixedUser" size="11"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="74U-fj-wjY" userLabel="nMonth">
+                                            <rect key="frame" x="41" y="0.0" width="17" height="32"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="bevel" title="〉" alternateTitle="nMonth" bezelStyle="rounded" alignment="center" inset="2" id="43x-vT-Ahf">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="goNextMonth:" target="-2" id="0a8-cW-IFf"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <animations/>
+                                    <visibilityPriorities>
+                                        <real value="1000"/>
+                                        <real value="1000"/>
+                                        <real value="1000"/>
+                                    </visibilityPriorities>
+                                    <customSpacing>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                    </customSpacing>
+                                </stackView>
+                                <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ufg-hR-uml" userLabel="yearStack">
+                                    <rect key="frame" x="0.0" y="33" width="65" height="32"/>
+                                    <subviews>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Mi-vv-q3h" userLabel="pYear">
+                                            <rect key="frame" x="0.0" y="0.0" width="17" height="32"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="bevel" title="《" alternateTitle="pMonth" bezelStyle="rounded" alignment="center" inset="2" id="zj2-8O-DEX">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="goPreviousYear:" target="-2" id="ojx-ID-w8r"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AzQ-Ke-CRV" userLabel="lYear">
+                                            <rect key="frame" x="15" y="7" width="35" height="17"/>
+                                            <animations/>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="9999" id="5uF-aZ-9Jp">
+                                                <font key="font" metaFont="fixedUser" size="11"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="w5V-dc-UEM" userLabel="nYear">
+                                            <rect key="frame" x="48" y="0.0" width="17" height="32"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="bevel" title="》" alternateTitle="nMonth" bezelStyle="rounded" alignment="center" inset="2" id="bd8-Gy-fiq">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="goNextYear:" target="-2" id="AFC-eY-6Wz"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <animations/>
+                                    <visibilityPriorities>
+                                        <integer value="1000"/>
+                                        <integer value="1000"/>
+                                        <integer value="1000"/>
+                                    </visibilityPriorities>
+                                    <customSpacing>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                    </customSpacing>
+                                </stackView>
+                                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Pna-Ik-zbP">
+                                    <rect key="frame" x="0.0" y="30" width="65" height="5"/>
+                                    <animations/>
+                                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <font key="titleFont" metaFont="system"/>
+                                </box>
+                                <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Db3-WT-F3k" userLabel="todayStack">
+                                    <rect key="frame" x="12" y="0.0" width="41" height="32"/>
+                                    <subviews>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="R7d-2y-Jrt">
+                                            <rect key="frame" x="0.0" y="0.0" width="41" height="32"/>
+                                            <animations/>
+                                            <buttonCell key="cell" type="bevel" title="Today" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="TI0-mN-lJ7">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="goToday:" target="-2" id="JCO-zn-PzR"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <animations/>
+                                    <visibilityPriorities>
+                                        <integer value="1000"/>
+                                    </visibilityPriorities>
+                                    <customSpacing>
+                                        <real value="3.4028234663852886e+38"/>
+                                    </customSpacing>
+                                </stackView>
+                            </subviews>
+                            <animations/>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
+                        <box horizontalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="kjU-xh-qpa">
+                            <rect key="frame" x="71" y="0.0" width="5" height="97"/>
+                            <animations/>
+                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <font key="titleFont" metaFont="system"/>
+                        </box>
+                        <stackView autoresizesSubviews="NO" distribution="fillProportionally" orientation="vertical" alignment="leading" spacing="5" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YEs-lL-lfb" userLabel="calView">
+                            <rect key="frame" x="82" y="0.0" width="162" height="97"/>
+                            <subviews>
+                                <scrollView borderType="none" horizontalLineScroll="0.0" horizontalPageScroll="0.0" verticalLineScroll="0.0" verticalPageScroll="0.0" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="drq-PX-OYv" userLabel="calHeader">
+                                    <rect key="frame" x="0.0" y="82" width="143" height="15"/>
+                                    <clipView key="contentView" copiesOnScroll="NO" id="47G-C7-TDX">
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="15"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <textView editable="NO" selectable="NO" drawsBackground="NO" importsGraphics="NO" verticallyResizable="NO" id="5z4-Xn-ren">
+                                                <rect key="frame" x="0.0" y="0.0" width="143" height="15"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <animations/>
+                                                <color key="textColor" red="0.7686274509803922" green="0.10196078431372549" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <size key="minSize" width="143" height="15"/>
+                                                <size key="maxSize" width="463" height="10000000"/>
+                                                <attributedString key="textStorage">
+                                                    <fragment content="Su">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.7686274509803922" green="0.10196078431372549" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="11" name="Menlo-Regular"/>
+                                                            <integer key="NSLigature" value="0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="26.450000762939453">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" Mo Tu We Th Fr ">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="11" name="Menlo-Regular"/>
+                                                            <integer key="NSLigature" value="0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="26.450000762939453">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="Sa">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.7686274509803922" green="0.10196078431372549" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="11" name="Menlo-Regular"/>
+                                                            <integer key="NSLigature" value="0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="26.450000762939453">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <size key="minSize" width="143" height="15"/>
+                                                <size key="maxSize" width="463" height="10000000"/>
+                                            </textView>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </clipView>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="15" id="cae-Bv-1a0"/>
+                                        <constraint firstAttribute="width" constant="143" id="hl0-fw-jZv"/>
+                                    </constraints>
+                                    <animations/>
+                                    <edgeInsets key="contentInsets" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="jIX-OH-Ymn">
+                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </scroller>
+                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="lMT-yn-Wgy">
+                                        <rect key="frame" x="-100" y="-100" width="16" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </scroller>
+                                </scrollView>
+                                <scrollView borderType="none" horizontalLineScroll="0.0" horizontalPageScroll="0.0" verticalLineScroll="0.0" verticalPageScroll="0.0" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="dS6-jK-8Rc" userLabel="calContent">
+                                    <rect key="frame" x="0.0" y="0.0" width="162" height="77"/>
+                                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="NeX-3o-ZHf">
+                                        <rect key="frame" x="0.0" y="0.0" width="162" height="77"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <textView editable="NO" selectable="NO" drawsBackground="NO" importsGraphics="NO" horizontallyResizable="YES" verticallyResizable="YES" id="yn7-Mh-EJn">
+                                                <rect key="frame" x="0.0" y="0.0" width="162" height="77"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <animations/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                <size key="minSize" width="162" height="77"/>
+                                                <size key="maxSize" width="463" height="10000000"/>
+                                                <attributedString key="textStorage">
+                                                    <fragment content="  1   2   3">
+                                                        <attributes>
+                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <font key="NSFont" metaFont="fixedUser" size="11"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <size key="minSize" width="162" height="77"/>
+                                                <size key="maxSize" width="463" height="10000000"/>
+                                            </textView>
+                                        </subviews>
+                                        <animations/>
+                                    </clipView>
+                                    <animations/>
+                                    <edgeInsets key="contentInsets" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="gB0-A2-ee5">
+                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </scroller>
+                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="HXc-tz-09b">
+                                        <rect key="frame" x="-100" y="-100" width="16" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <animations/>
+                                    </scroller>
+                                </scrollView>
+                            </subviews>
+                            <animations/>
+                            <constraints>
+                                <constraint firstItem="dS6-jK-8Rc" firstAttribute="top" secondItem="drq-PX-OYv" secondAttribute="bottom" constant="5" id="2LC-xa-zXQ"/>
+                                <constraint firstAttribute="bottom" secondItem="dS6-jK-8Rc" secondAttribute="bottom" id="VCK-Qm-jUA"/>
+                                <constraint firstItem="drq-PX-OYv" firstAttribute="top" secondItem="YEs-lL-lfb" secondAttribute="top" id="WDA-WG-nMc"/>
+                            </constraints>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
+                    </subviews>
+                    <animations/>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Jf8-KI-8aa" secondAttribute="trailing" id="AU8-Rl-Sg9"/>
+                <constraint firstAttribute="bottom" secondItem="Jf8-KI-8aa" secondAttribute="bottom" id="Hhq-NG-VtL"/>
+                <constraint firstItem="Jf8-KI-8aa" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="KvQ-v8-Yur"/>
+                <constraint firstItem="Jf8-KI-8aa" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="dor-q7-lQt"/>
+            </constraints>
+            <animations/>
+            <point key="canvasLocation" x="195" y="258"/>
+        </customView>
+    </objects>
+</document>

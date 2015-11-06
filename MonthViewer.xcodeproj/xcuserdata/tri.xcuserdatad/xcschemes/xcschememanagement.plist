@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MonthViewerWidget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>11851FE61BE918B4006C0047</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>11851FFA1BE918C4006C0047</key>
 		<dict>
 			<key>primary</key>
 			<true/>
