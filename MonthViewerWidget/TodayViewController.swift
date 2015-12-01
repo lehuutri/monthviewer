@@ -45,7 +45,8 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         //highlight today
         if (month == thisMonth && year == thisYear) {
             let myMutableString = NSMutableAttributedString(attributedString: textView.attributedString())
-            let todayLocation = (cal.day - 1) * 3 + Int((cal.day - 1)/7)
+            let todayCol = cal.day + (cal.dow - 1) - 1
+            let todayLocation = todayCol * 3 + Int(todayCol/7)
             myMutableString.addAttribute(NSForegroundColorAttributeName,
                 value: NSColor.greenColor(),
                 range: NSRange(location:todayLocation, length:2))
