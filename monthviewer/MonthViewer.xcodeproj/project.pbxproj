@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11851FEB1BE918B4006C0047 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11851FEA1BE918B4006C0047 /* AppDelegate.swift */; };
+		11851FED1BE918B4006C0047 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11851FEC1BE918B4006C0047 /* Assets.xcassets */; };
+		11851FF01BE918B4006C0047 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11851FEE1BE918B4006C0047 /* MainMenu.xib */; };
+		11851FFE1BE918C4006C0047 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11851FFD1BE918C4006C0047 /* NotificationCenter.framework */; };
+		118520031BE918C4006C0047 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118520021BE918C4006C0047 /* TodayViewController.swift */; };
+		118520061BE918C4006C0047 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 118520041BE918C4006C0047 /* TodayViewController.xib */; };
+		1185200A1BE918C4006C0047 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 118520081BE918C4006C0047 /* InfoPlist.strings */; };
+		1185200D1BE918C4006C0047 /* MonthViewerWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 11851FFB1BE918C4006C0047 /* MonthViewerWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		11906FE61BE9F77F00E898C5 /* MonthCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11906FE51BE9F77F00E898C5 /* MonthCal.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1185200B1BE918C4006C0047 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11851FDF1BE918B4006C0047 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11851FFA1BE918C4006C0047;
+			remoteInfo = MonthViewerWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		118520111BE918C4006C0047 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1185200D1BE918C4006C0047 /* MonthViewerWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		11851FE71BE918B4006C0047 /* MonthViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonthViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11851FEA1BE918B4006C0047 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		11851FEC1BE918B4006C0047 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		11851FEF1BE918B4006C0047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		11851FF11BE918B4006C0047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11851FFB1BE918C4006C0047 /* MonthViewerWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MonthViewerWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		11851FFD1BE918C4006C0047 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		118520011BE918C4006C0047 /* MonthViewerWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MonthViewerWidget.entitlements; sourceTree = "<group>"; };
+		118520021BE918C4006C0047 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		118520051BE918C4006C0047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TodayViewController.xib; sourceTree = "<group>"; };
+		118520071BE918C4006C0047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		118520091BE918C4006C0047 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		11906FE51BE9F77F00E898C5 /* MonthCal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonthCal.swift; path = MonthViewerWidget/MonthCal.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11851FE41BE918B4006C0047 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11851FF81BE918C4006C0047 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11851FFE1BE918C4006C0047 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11851FDE1BE918B4006C0047 = {
+			isa = PBXGroup;
+			children = (
+				11851FE91BE918B4006C0047 /* MonthViewer */,
+				11851FFF1BE918C4006C0047 /* MonthViewerWidget */,
+				11851FFC1BE918C4006C0047 /* Frameworks */,
+				11851FE81BE918B4006C0047 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		11851FE81BE918B4006C0047 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11851FE71BE918B4006C0047 /* MonthViewer.app */,
+				11851FFB1BE918C4006C0047 /* MonthViewerWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11851FE91BE918B4006C0047 /* MonthViewer */ = {
+			isa = PBXGroup;
+			children = (
+				11851FEA1BE918B4006C0047 /* AppDelegate.swift */,
+				11851FEC1BE918B4006C0047 /* Assets.xcassets */,
+				11851FEE1BE918B4006C0047 /* MainMenu.xib */,
+				11851FF11BE918B4006C0047 /* Info.plist */,
+			);
+			path = MonthViewer;
+			sourceTree = "<group>";
+		};
+		11851FFC1BE918C4006C0047 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11851FFD1BE918C4006C0047 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11851FFF1BE918C4006C0047 /* MonthViewerWidget */ = {
+			isa = PBXGroup;
+			children = (
+				11906FE51BE9F77F00E898C5 /* MonthCal.swift */,
+				118520021BE918C4006C0047 /* TodayViewController.swift */,
+				118520041BE918C4006C0047 /* TodayViewController.xib */,
+				118520071BE918C4006C0047 /* Info.plist */,
+				118520081BE918C4006C0047 /* InfoPlist.strings */,
+				118520001BE918C4006C0047 /* Supporting Files */,
+			);
+			path = MonthViewerWidget;
+			sourceTree = "<group>";
+		};
+		118520001BE918C4006C0047 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				118520011BE918C4006C0047 /* MonthViewerWidget.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11851FE61BE918B4006C0047 /* MonthViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11851FF41BE918B4006C0047 /* Build configuration list for PBXNativeTarget "MonthViewer" */;
+			buildPhases = (
+				11851FE31BE918B4006C0047 /* Sources */,
+				11851FE41BE918B4006C0047 /* Frameworks */,
+				11851FE51BE918B4006C0047 /* Resources */,
+				118520111BE918C4006C0047 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1185200C1BE918C4006C0047 /* PBXTargetDependency */,
+			);
+			name = MonthViewer;
+			productName = MonthViewer;
+			productReference = 11851FE71BE918B4006C0047 /* MonthViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		11851FFA1BE918C4006C0047 /* MonthViewerWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1185200E1BE918C4006C0047 /* Build configuration list for PBXNativeTarget "MonthViewerWidget" */;
+			buildPhases = (
+				11851FF71BE918C4006C0047 /* Sources */,
+				11851FF81BE918C4006C0047 /* Frameworks */,
+				11851FF91BE918C4006C0047 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MonthViewerWidget;
+			productName = MonthViewerWidget;
+			productReference = 11851FFB1BE918C4006C0047 /* MonthViewerWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11851FDF1BE918B4006C0047 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Le Huu Tri";
+				TargetAttributes = {
+					11851FE61BE918B4006C0047 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					11851FFA1BE918C4006C0047 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 11851FE21BE918B4006C0047 /* Build configuration list for PBXProject "MonthViewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11851FDE1BE918B4006C0047;
+			productRefGroup = 11851FE81BE918B4006C0047 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11851FE61BE918B4006C0047 /* MonthViewer */,
+				11851FFA1BE918C4006C0047 /* MonthViewerWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11851FE51BE918B4006C0047 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11851FED1BE918B4006C0047 /* Assets.xcassets in Resources */,
+				11851FF01BE918B4006C0047 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11851FF91BE918C4006C0047 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				118520061BE918C4006C0047 /* TodayViewController.xib in Resources */,
+				1185200A1BE918C4006C0047 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11851FE31BE918B4006C0047 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11851FEB1BE918B4006C0047 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11851FF71BE918C4006C0047 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11906FE61BE9F77F00E898C5 /* MonthCal.swift in Sources */,
+				118520031BE918C4006C0047 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1185200C1BE918C4006C0047 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11851FFA1BE918C4006C0047 /* MonthViewerWidget */;
+			targetProxy = 1185200B1BE918C4006C0047 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		11851FEE1BE918B4006C0047 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11851FEF1BE918B4006C0047 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		118520041BE918C4006C0047 /* TodayViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				118520051BE918C4006C0047 /* Base */,
+			);
+			name = TodayViewController.xib;
+			sourceTree = "<group>";
+		};
+		118520081BE918C4006C0047 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				118520091BE918C4006C0047 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11851FF21BE918B4006C0047 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		11851FF31BE918B4006C0047 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		11851FF51BE918B4006C0047 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = MonthViewer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lehuutri.MonthViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		11851FF61BE918B4006C0047 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = MonthViewer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lehuutri.MonthViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1185200F1BE918C4006C0047 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MonthViewerWidget/MonthViewerWidget.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MonthViewerWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lehuutri.MonthViewer.MonthViewerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		118520101BE918C4006C0047 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MonthViewerWidget/MonthViewerWidget.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MonthViewerWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lehuutri.MonthViewer.MonthViewerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11851FE21BE918B4006C0047 /* Build configuration list for PBXProject "MonthViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11851FF21BE918B4006C0047 /* Debug */,
+				11851FF31BE918B4006C0047 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11851FF41BE918B4006C0047 /* Build configuration list for PBXNativeTarget "MonthViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11851FF51BE918B4006C0047 /* Debug */,
+				11851FF61BE918B4006C0047 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1185200E1BE918C4006C0047 /* Build configuration list for PBXNativeTarget "MonthViewerWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1185200F1BE918C4006C0047 /* Debug */,
+				118520101BE918C4006C0047 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 11851FDF1BE918B4006C0047 /* Project object */;
+}
